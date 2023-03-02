@@ -13,7 +13,6 @@ function AddTask({handleTasks}) {
         setTaskName("");
         setTaskDate("");
     };
-    console.log(taskDate, taskName);
   return (
     <Form onSubmit={handleNewTask}>
         <Form.Group className="mb-3" controlId="name">

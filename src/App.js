@@ -3,15 +3,12 @@ import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
 import Container from "react-bootstrap/Container";
 import { useState } from "react";
+import { taskData } from "./helpers/data";
 import "./App.css"
 
 function App() {
   const [visibility, setVisibility] = useState(true)
-  const [tasks, setTasks] = useState([])
-
-  // console.log(new Date().valueOf());
-  console.log(tasks);
-
+  const [tasks, setTasks] = useState(taskData)
   const handleVisibility = () => {
     setVisibility(!visibility)
   }
