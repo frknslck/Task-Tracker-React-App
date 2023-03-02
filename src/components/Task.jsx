@@ -4,15 +4,15 @@ import { BsFillTrashFill } from 'react-icons/bs';
 const Task = ({task, handleRemove}) => {
     const {id, taskName, taskDate, completed} = task
   return (
-    <>
-        <div key={id}>
-            <div className={`${completed && "completed"}`}>
+    <div>
+        <div className='task-list' key={id}>
+            <div className={` ${completed && "completed"}`}>
                 <h1>{taskName}</h1>
-                <h1>{new Date(taskDate).toDateString()}</h1>
+                <p>{new Date(taskDate).toDateString()}</p>
             </div>
-            <button><BsFillTrashFill onClick={() => handleRemove(id)}/></button>
+            <button className='btn btn-light'><BsFillTrashFill onClick={() => handleRemove(id)}/></button>
         </div>
-    </>
+    </div>
   )
 }
 

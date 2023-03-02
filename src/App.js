@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <Container className="container">
+    <Container className="w-50">
       <Header visibility={visibility} handleVisibility={handleVisibility}/>
       {visibility && <AddTask handleTasks={handleTasks}/>}
       <Tasks tasks={tasks} handleRemove={handleRemove}/>
