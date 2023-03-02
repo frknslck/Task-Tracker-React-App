@@ -3,15 +3,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem 0 0 0.5rem;
     border-radius: 20px;
 }
 
-.btn{
+.task-list-border{
+    border-left: 1rem black solid;
+}
+
+.trash-can{
     height: fit-content !important;
+    font-size: 1.5rem !important;
 }
 
 
-.completed{
+.completed{ 
     color: red;
+    text-decoration: line-through;
+   
 }

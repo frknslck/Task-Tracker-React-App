@@ -14,15 +14,15 @@ function AddTask({handleTasks}) {
         setTaskDate("");
     };
   return (
-        <Form onSubmit={handleNewTask}>
+        <Form onSubmit={handleNewTask} className="border p-3">
             <Form.Group className="mb-3" controlId="name">
                 <Form.Label className='fs-1 text-light'>Task</Form.Label>
-                <Form.Control className='w-50' type="text" placeholder="Enter your name" onChange={(e) => setTaskName(e.target.value)}/>
+                <Form.Control type="text" placeholder="Don't forget to get some rest..." onChange={(e) => setTaskName(e.target.value)}/>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="datetime">
                 <Form.Label className='fs-1 text-light'>Day&Time</Form.Label>
-                <Form.Control className='w-50' type="datetime-local" onChange={(e) => setTaskDate(e.target.value)}/>
+                <Form.Control type="datetime-local" onChange={(e) => setTaskDate(e.target.value)}/>
             </Form.Group>
 
             <Button className="btn btn-submit " variant="primary" type="submit">
