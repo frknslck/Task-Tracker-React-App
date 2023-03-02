@@ -14,7 +14,7 @@ function App() {
   }
 
   const handleTasks = (task) => {
-    setTasks([...tasks, task])
+    setTasks([task, ...tasks])
   }
 
   const handleRemove = (id) => {
@@ -25,7 +25,7 @@ function App() {
     <Container className="w-25 border rounded">
       <Header visibility={visibility} handleVisibility={handleVisibility}/>
       {visibility && <AddTask handleTasks={handleTasks}/>}
-      <Tasks tasks={tasks} handleRemove={handleRemove}/>
+      <Tasks tasks={tasks} setTasks={setTasks} handleRemove={handleRemove}/>
     </Container>
     ) 
 }
